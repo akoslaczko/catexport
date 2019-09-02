@@ -5,7 +5,7 @@
 
         <record id="cat_menu_action" model="ir.actions.act_window">
         	<field name="name">Breed</field>
-        	<field name="res_model">student.student</field>
+        	<field name="res_model">cat.cat</field>
         	<field name="view_type">form</field>
         	<field name="view_mode">tree,form</field>
         	<field name="domain">[]</field>

@@ -7,7 +7,7 @@
             <field name="name">cat.tree.view</field>
             <field name="model">cat.cat</field>
             <field name="arch" type="xml">
-                <tree string="Cat Stock">
+                <tree string="Stock">
 					<field name="breed"/>
 					<field name="stock"/>
                 </tree>
@@ -27,10 +27,21 @@
             </field>
         </record>
 
+		<record model="ir.ui.view" id="country_pivot_view">
+            <field name="name">country.pivot.view</field>
+            <field name="model">cat.partner</field>
+            <field name="arch" type="xml">
+				<pivot string="Orders by Countries">
+					<field name="country" type="row"/>
+					<field name="orders" type="measure"/>
+				</pivot>
+            </field>
+        </record>
+
 
 		<!--  ACTIONS  -->
         <record id="cat_menu_action" model="ir.actions.act_window">
-        	<field name="name">Cat Stock</field>
+        	<field name="name">Stock</field>
         	<field name="res_model">cat.cat</field>
         	<field name="view_type">form</field>
         	<field name="view_mode">tree,form</field>
@@ -45,7 +56,7 @@
         	<field name="name">Partners</field>
         	<field name="res_model">cat.partner</field>
         	<field name="view_type">form</field>
-        	<field name="view_mode">tree,form</field>
+        	<field name="view_mode">tree,form,pivot</field>
         	<field name="domain">[]</field>
         	<field name="help" type="html">
             	<p class="oe_view_nocontent_create">Add First Partner
@@ -58,7 +69,7 @@
               	name="Macskaexport Professional"/>
     	<menuitem id="catexport_cat_menu"
                   parent="catexport_menu"
-                  name="Cat Stock"
+                  name="Stock"
                   action="cat_menu_action"/>
 		<menuitem id="catexport_partner_menu"
                   parent="catexport_menu"

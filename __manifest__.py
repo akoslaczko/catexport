@@ -10,11 +10,12 @@
 	'depends': ['base'],
 	'data': [
 		'security/ir.model.access.csv',
-        'views/cat_view.xml'
+        'views/views.xml'
 	],
 	'images': [
 		'static/description/icon.png'
 	],
+	'css': []
 	'license': 'AGPL-3',
 	'installable': True,
 	'application': True,

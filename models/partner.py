@@ -1,7 +1,8 @@
 from odoo import models, fields
 
-class PartnerPartner(models.Model):
-    _name = 'partner.partner'
+
+class CatPartner(models.Model):
+    _name = 'cat.partner'
 
     name = fields.Char(string='Name', required=True)
     company = fields.Char(string='Company', required=True)

@@ -1,3 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import cat, partner
+from . import cat
+from . import partner

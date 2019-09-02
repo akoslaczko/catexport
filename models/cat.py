@@ -1,5 +1,6 @@
 from odoo import models, fields
 
+
 class CatCat(models.Model):
     _name = 'cat.cat'
 

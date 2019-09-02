@@ -16,7 +16,7 @@
 
 		<record model="ir.ui.view" id="partner_tree_view">
             <field name="name">partner.tree.view</field>
-            <field name="model">partner.partner</field>
+            <field name="model">cat.partner</field>
             <field name="arch" type="xml">
                 <tree string="Partners">
 					<field name="name"/>
@@ -43,7 +43,7 @@
 
 		<record id="partner_menu_action" model="ir.actions.act_window">
         	<field name="name">Partners</field>
-        	<field name="res_model">partner.partner</field>
+        	<field name="res_model">cat.partner</field>
         	<field name="view_type">form</field>
         	<field name="view_mode">tree,form</field>
         	<field name="domain">[]</field>

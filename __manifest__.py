@@ -12,8 +12,10 @@
 		'security/ir.model.access.csv',
         'views/cat_view.xml'
 	],
-	'images': [],
-	'license': 'AGPL-3',
+	'images': [
+		'static/description/icon.png'
+	],
+	'license': 'MIT',
 	'installable': True,
 	'application': True,
 	'auto_install': False,

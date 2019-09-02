@@ -3,6 +3,18 @@
 	<data>
 
 
+		<record model="ir.ui.view" id="cat_tree_view">
+            <field name="name">cat.tree.view</field>
+            <field name="model">cat.cat</field>
+            <field name="arch" type="xml">
+                <tree string="Cat Stock">
+					<field name="breed"/>
+					<field name="stock"/>
+                </tree>
+            </field>
+        </record>
+
+
         <record id="cat_menu_action" model="ir.actions.act_window">
         	<field name="name">Cat Stock</field>
         	<field name="res_model">cat.cat</field>

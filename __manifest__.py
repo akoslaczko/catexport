@@ -15,7 +15,7 @@
 	'images': [
 		'static/description/icon.png'
 	],
-	'license': 'MIT',
+	'license': 'AGPL-3',
 	'installable': True,
 	'application': True,
 	'auto_install': False,

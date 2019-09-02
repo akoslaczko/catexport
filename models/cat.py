@@ -4,4 +4,4 @@ class CatCat(models.Model):
     _name = 'cat.cat'
 
     breed = fields.Char(string='Breed', required=True)
-    stock = fields.Integer(string='Stock')
+    stock = fields.Integer(string='Stock', required=True)

@@ -2,7 +2,7 @@
 <odoo>
 	<data>
 
-
+		<!--  VIEWS	  -->
 		<record model="ir.ui.view" id="cat_tree_view">
             <field name="name">cat.tree.view</field>
             <field name="model">cat.cat</field>
@@ -14,7 +14,21 @@
             </field>
         </record>
 
+		<record model="ir.ui.view" id="partner_tree_view">
+            <field name="name">partner.tree.view</field>
+            <field name="model">partner.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Partners">
+					<field name="name"/>
+					<field name="company"/>
+					<field name="country"/>
+					<field name="orders"/>
+                </tree>
+            </field>
+        </record>
 
+
+		<!--  ACTIONS  -->
         <record id="cat_menu_action" model="ir.actions.act_window">
         	<field name="name">Cat Stock</field>
         	<field name="res_model">cat.cat</field>
@@ -22,16 +36,33 @@
         	<field name="view_mode">tree,form</field>
         	<field name="domain">[]</field>
         	<field name="help" type="html">
-            	<p class="oe_view_nocontent_create">Add Cat Breed to Stock
+            	<p class="oe_view_nocontent_create">Add First Breed to Stock
             	</p>
         	</field>
         </record>
 
+		<record id="partner_menu_action" model="ir.actions.act_window">
+        	<field name="name">Partners</field>
+        	<field name="res_model">partner.partner</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">tree,form</field>
+        	<field name="domain">[]</field>
+        	<field name="help" type="html">
+            	<p class="oe_view_nocontent_create">Add First Partner
+            	</p>
+        	</field>
+        </record>
+
+		<!--  MENUS	  -->
     	<menuitem id="catexport_menu"
               	name="Macskaexport Professional"/>
     	<menuitem id="catexport_cat_menu"
                   parent="catexport_menu"
                   name="Cat Stock"
                   action="cat_menu_action"/>
+		<menuitem id="catexport_partner_menu"
+                  parent="catexport_menu"
+                  name="Partners"
+                  action="partner_menu_action"/>
 	</data>
 </odoo>

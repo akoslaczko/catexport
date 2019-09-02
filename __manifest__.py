@@ -15,7 +15,7 @@
 	'images': [
 		'static/description/icon.png'
 	],
-	'css': []
+	'css': [],
 	'license': 'AGPL-3',
 	'installable': True,
 	'application': True,
